@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useRef} from "react";
 import Card from "./Card";
 import Button from "./Button";
 import styles from "./ErrorModel.module.css";
-const ErrorModel = (props) => {
+
+
+const ErrorModel = (props) => {  
   return(
-  <div>
+  <React.Fragment>
     <div className={styles.backdrop} onClick={props.onConfirm}></div>
     <Card className={styles.model}>
       <h2 className={styles.header}>{props.title}</h2>
@@ -15,7 +17,7 @@ const ErrorModel = (props) => {
         <Button onClick={props.onConfirm}>Okay</Button>
       </footer>
     </Card>
-  </div>);
+  </React.Fragment>);
 };
 
 export default ErrorModel;
